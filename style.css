@@ -1,0 +1,154 @@
+body {
+    height: 100vh;
+    font-family: sans-serif;
+}
+.main-hover-effect{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.box .bg-image-julia {
+    width: 100%;
+    height: 100%;
+    transition: all ease .3s;
+    background-image: url(https://th.bing.com/th/id/R.fdd94ce9fb0f49caa1db648ff25b6a71?rik=sI5zTysOqLRK%2bw&pid=ImgRaw&r=0);
+}
+
+.box .bg-image-julia .overlay-julia {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all ease .3s;
+}
+
+
+.text {
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    padding: 8px 0 20px 0;
+    font-size: 22px ;
+}
+
+
+.text-box {
+    background: white;
+    color: black;
+    padding: 8px;
+    position: absolute;
+    transform: translate(-400px);
+    transition: all ease .3s;
+    left: 80px;
+    
+}
+.text h2 {
+    text-transform: uppercase ;
+    font-weight: 300;
+}
+.text span {
+    color: white;
+    word-spacing: -0.15rem;
+}
+
+.text-box-1 {
+    top: 140px;
+}
+.text-box-2 {
+    top: 180px;
+    transition-delay: 100ms;
+}
+.text-box-3 {
+    top: 220px;
+    transition-delay: 200ms;
+}
+
+
+
+.box:hover > .bg-image-julia {
+    transform: scale(1.2);
+}
+
+.box:hover > .bg-image-julia > .overlay-julia {
+    background-color: rgb(0,0,0,0.3);
+}
+
+.box:hover .text-box {
+    transform: translateX(0px);
+}
+.box-container {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.box-container .bg-image-moses {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://th.bing.com/th/id/OIP.30oZVTiOSU6V-AkXz0AQkQHaEK?pid=ImgDet&rs=1);
+    transition: all ease .3s;
+
+}
+.box-container:hover > .bg-image-moses {
+    transform: scale(1.2);
+}
+.box-container .bg-image-moses .overlay-moses {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all ease .3s;
+}
+.box-container:hover > .bg-image-moses > .overlay-moses {
+    background-color: rgb(0,0,0,0.3);
+}
+.square-place {
+    width: 240px;
+    height: 150px;
+    border: 2px solid white;
+    position: absolute;
+    left: 800px;
+    top: 60px;
+    transform: translate(20px,20px);
+   
+
+}
+.square-place h2 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 24px ;
+    padding-left: 30px;
+    font-weight: 300;
+}
+.square-move {
+    width: 220px;
+    height: 150px;
+    border: 2px solid white;
+    position: absolute;
+    right: 62px;
+    bottom: 290px;
+    transition-delay: 100ms;
+    transform: translate(500px,500px);
+}
+.square-move p {
+    color: white;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 40px;
+    padding-top:40px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.box-container:hover  > .square-place {
+    transform: translate(0px,0px);
+}
+.box-container:hover  > .square-move {
+    transform: translate(0px,0px);
+}
+
