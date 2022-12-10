@@ -4,24 +4,24 @@ body {
 }
 .main-hover-effect{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.box {
-    width: 600px;
-    height: 400px;
+.box-julia {
+    width: 460px;
+    height: 380px;
     overflow: hidden;
     position: relative;
 }
 
-.box .bg-image-julia {
+.box-julia .bg-image-julia {
     width: 100%;
     height: 100%;
     transition: all ease .3s;
     background-image: url(https://th.bing.com/th/id/R.fdd94ce9fb0f49caa1db648ff25b6a71?rik=sI5zTysOqLRK%2bw&pid=ImgRaw&r=0);
 }
 
-.box .bg-image-julia .overlay-julia {
+.box-julia .bg-image-julia .overlay-julia {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0);
@@ -29,13 +29,14 @@ body {
 }
 
 
-.text {
+.text-julia  {
+    font-size: 30px;
     color: white;
     position: absolute;
     top: 40px;
     left: 80px;
     padding: 8px 0 20px 0;
-    font-size: 22px ;
+    text-transform: uppercase;
 }
 
 
@@ -58,97 +59,148 @@ body {
     word-spacing: -0.15rem;
 }
 
-.text-box-1 {
+.text-box-julia-1 {
     top: 140px;
 }
-.text-box-2 {
+.text-box-julia-2 {
     top: 180px;
     transition-delay: 100ms;
 }
-.text-box-3 {
+.text-box-julia-3 {
     top: 220px;
     transition-delay: 200ms;
 }
 
 
 
-.box:hover > .bg-image-julia {
+.box-julia:hover > .bg-image-julia {
     transform: scale(1.2);
 }
 
-.box:hover > .bg-image-julia > .overlay-julia {
+.box-julia:hover > .bg-image-julia > .overlay-julia {
     background-color: rgb(0,0,0,0.3);
 }
 
-.box:hover .text-box {
+.box-julia:hover .text-box {
     transform: translateX(0px);
 }
-.box-container {
-    width: 600px;
-    height: 400px;
-    overflow: hidden;
+.box-moses {
+    color: white;
+    font-family: 'Inter',sans-serif;
+    position: relative;
+    width: 460px;
+    height: 380px;
+}
+.box-moses .bg-image-moses {
+    width: 100%;
+    height: 100%;
+    transition: all ease .3s;
+    background-image: url(https://th.bing.com/th/id/OIP.wDWGbndFwxAKDVuOeFc9VwHaFj?pid=ImgDet&rs=1);
+}
+.box-moses .bg-image-moses .overlay-moses {
+    width: 100%;
+    height: 100%;
+    transition: all ease .3s;
+    background-color: rgba(0, 0, 0, 0);
+}
+.box-moses:hover > .bg-image-moses > .overlay-moses {
+    background-color: rgba(0 ,0 ,0 ,0.5);
+
+}
+.block-1,
+.block-2 {
+    border: 2px solid white;
+    width: 200px;
+    height: 140px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+.block-1 {
+    padding: 20px 40px 40px 20px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    text-transform: uppercase;
+}
+.block-1 h2,p {
+    margin: 0;
+}
+.block-1 p {
+    font-size: 24px;
+}
+.block-2 {
+    text-transform: uppercase;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 20px;
+    
+
+}
+.block-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.box-moses:hover > .block-moses > .block-1
+{
+    top: 50px;
+    left: 30px;
+}
+
+.box-moses:hover >.block-moses >.block-2 {
+    bottom: 40px;
+    right: 40px;
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.box-sadie {
+    width: 460px;
+    height: 380px;
+    font-family: 'Inter',sans-serif;
     position: relative;
 }
-.box-container .bg-image-moses {
+.box-sadie .bg-image-sadie {
     width: 100%;
     height: 100%;
-    background-image: url(https://th.bing.com/th/id/OIP.30oZVTiOSU6V-AkXz0AQkQHaEK?pid=ImgDet&rs=1);
+    background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/simple-minimalist-abstract-mountain-landscape-matthias-hauser.jpg);
+}
+.text-sadie {
+    text-align: center;
+}
+.text-sadie-1 {
+    text-transform: uppercase;
+    color: black;
+    font-size: 30px;
+    position: absolute;
+    transform: translate(130px,-200px);
     transition: all ease .3s;
-
 }
-.box-container:hover > .bg-image-moses {
-    transform: scale(1.2);
+.text-sadie-2 {
+    color: white;
+    position: absolute;
+    text-transform: uppercase;
+    transform: translate(70px,0);
+    transition: all ease .6s;
 }
-.box-container .bg-image-moses .overlay-moses {
+.box-sadie .bg-image-sadie .overlay-sadie {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0);
     transition: all ease .3s;
+    background-color: rgba(101, 65, 8, 0.6);
 }
-.box-container:hover > .bg-image-moses > .overlay-moses {
-    background-color: rgb(0,0,0,0.3);
+.box-sadie:hover > .bg-image-sadie > .overlay-sadie {
+    background-color: rgba(101, 65, 8, 1);
 }
-.square-place {
-    width: 240px;
-    height: 150px;
-    border: 2px solid white;
-    position: absolute;
-    left: 800px;
-    top: 60px;
-    transform: translate(20px,20px);
-   
-
-}
-.square-place h2 {
-    text-transform: uppercase;
+.box-sadie:hover > .text-sadie > .text-sadie-1 {
     color: white;
-    font-size: 24px ;
-    padding-left: 30px;
-    font-weight: 300;
+    transform: translate(130px,-250px);
 }
-.square-move {
-    width: 220px;
-    height: 150px;
-    border: 2px solid white;
-    position: absolute;
-    right: 62px;
-    bottom: 290px;
-    transition-delay: 100ms;
-    transform: translate(500px,500px);
-}
-.square-move p {
+.box-sadie:hover > .text-sadie > .text-sadie-2 {
     color: white;
-    text-align: right;
-    padding-right: 10px;
-    padding-left: 40px;
-    padding-top:40px;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-.box-container:hover  > .square-place {
-    transform: translate(0px,0px);
-}
-.box-container:hover  > .square-move {
-    transform: translate(0px,0px);
+    transform: translate(70px,-60px);
 }
 
